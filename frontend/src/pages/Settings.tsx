@@ -58,15 +58,15 @@ const Settings = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" defaultValue="Jane Cooper" />
+                    <Input id="name" defaultValue="Gokkul" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" defaultValue="jane@example.com" />
+                    <Input id="email" type="email" defaultValue="mrgokkul@gmail.com" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="school">School/University</Label>
-                    <Input id="school" defaultValue="Stanford University" />
+                    <Input id="school" defaultValue="Saveetha University" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="major">Major/Subject Area</Label>

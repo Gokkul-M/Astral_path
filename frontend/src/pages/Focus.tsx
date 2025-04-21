@@ -84,6 +84,7 @@ const Focus = () => {
     <div className="max-w-6xl mx-auto">
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Focus Mode</h1>
+        
         <p className="text-muted-foreground">
           Enhance your concentration with timed focus sessions
         </p>

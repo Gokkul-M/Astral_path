@@ -11,6 +11,7 @@ import ThoughtWeb from "./pages/ThoughtWeb";
 import Focus from "./pages/Focus";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import AddTaskForm from "./pages/Addtask";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,8 @@ const App = () => (
             <Route path="/thought-web" element={<ThoughtWeb />} />
             <Route path="/focus" element={<Focus />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/not-found" element={<NotFound />} />
+            <Route path ="/addtask" element={<AddTaskForm />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

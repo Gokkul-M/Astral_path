@@ -1,5 +1,8 @@
 
 import React, { useState } from "react";
+import { useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -29,6 +32,7 @@ interface Task {
   completed: boolean;
   tags: string[];
 }
+
 
 const Tasks = () => {
   const [viewMode, setViewMode] = useState<"list" | "flow">("list");
@@ -201,7 +205,7 @@ const Tasks = () => {
             {viewMode === "list" ? <Grid2X2 size={16} /> : <List size={16} />}
           </Button>
           
-          <Button className="gap-1">
+          <Button className="gap-1" >
             <Plus size={16} />
             <span>Add Task</span>
           </Button>
