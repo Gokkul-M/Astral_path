@@ -208,64 +208,74 @@ const Settings = () => {
         </TabsContent>
         
         <TabsContent value="integrations">
-          <Card className="card-gradient">
-            <CardHeader>
-              <CardTitle>Learning Management System Integrations</CardTitle>
-              <CardDescription>Connect your academic accounts</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-3 rounded-lg border">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-md bg-[#4285F4] flex items-center justify-center text-white font-bold">
-                      G
-                    </div>
-                    <div>
-                      <p className="font-medium">Google Classroom</p>
-                      <p className="text-sm text-muted-foreground">Import assignments and deadlines</p>
-                    </div>
-                  </div>
-                  <Button variant="outline" className="gap-1">
-                    Connect
-                    <ChevronRight size={16} />
-                  </Button>
-                </div>
-                
-                <div className="flex items-center justify-between p-3 rounded-lg border">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-md bg-[#E21B3C] flex items-center justify-center text-white font-bold">
-                      C
-                    </div>
-                    <div>
-                      <p className="font-medium">Canvas</p>
-                      <p className="text-sm text-muted-foreground">Sync your courses and assignments</p>
-                    </div>
-                  </div>
-                  <Button variant="outline" className="gap-1">
-                    Connect
-                    <ChevronRight size={16} />
-                  </Button>
-                </div>
-                
-                <div className="flex items-center justify-between p-3 rounded-lg border">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-md bg-[#3A5998] flex items-center justify-center text-white font-bold">
-                      M
-                    </div>
-                    <div>
-                      <p className="font-medium">Moodle</p>
-                      <p className="text-sm text-muted-foreground">Connect to your school's Moodle instance</p>
-                    </div>
-                  </div>
-                  <Button variant="outline" className="gap-1">
-                    Connect
-                    <ChevronRight size={16} />
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
+  <Card className="card-gradient">
+    <CardHeader>
+      <CardTitle>Connected Apps</CardTitle>
+      <CardDescription>Integrate with your favorite tools</CardDescription>
+    </CardHeader>
+    <CardContent className="space-y-4">
+
+      {/* Google Drive */}
+      <div className="flex items-center justify-between p-3 rounded-lg border">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-md bg-[#34A853] flex items-center justify-center text-white font-bold">D</div>
+          <div>
+            <p className="font-medium">Google Drive</p>
+            <p className="text-sm text-muted-foreground">Access and store files</p>
+          </div>
+        </div>
+        <Button
+          variant="outline"
+          className="gap-1"
+          onClick={() => window.location.href = "http://localhost:5000/api/integrations/google-drive"}
+        >
+          Connect
+          <ChevronRight size={16} />
+        </Button>
+      </div>
+
+      {/* Google Classroom */}
+      <div className="flex items-center justify-between p-3 rounded-lg border">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-md bg-[#4285F4] flex items-center justify-center text-white font-bold">C</div>
+          <div>
+            <p className="font-medium">Google Classroom</p>
+            <p className="text-sm text-muted-foreground">Sync courses & deadlines</p>
+          </div>
+        </div>
+        <Button
+          variant="outline"
+          className="gap-1"
+          onClick={() => window.location.href = "http://localhost:5000/api/integrations/google-classroom"}
+        >
+          Connect
+          <ChevronRight size={16} />
+        </Button>
+      </div>
+
+      {/* Notion */}
+      <div className="flex items-center justify-between p-3 rounded-lg border">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-md bg-black text-white flex items-center justify-center text-xl font-bold">N</div>
+          <div>
+            <p className="font-medium">Notion</p>
+            <p className="text-sm text-muted-foreground">Sync notes and pages</p>
+          </div>
+        </div>
+        <Button
+          variant="outline"
+          className="gap-1"
+          onClick={() => window.location.href = "http://localhost:5000/api/integrations/notion"}
+        >
+          Connect
+          <ChevronRight size={16} />
+        </Button>
+      </div>
+
+    </CardContent>
+  </Card>
+</TabsContent>
+
       </Tabs>
     </div>
   );

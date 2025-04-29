@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -20,22 +20,7 @@ const Dashboard = () => {
 
   const [userName, setUserName] = useState("Gokkul");
   const [currentMood, setCurrentMood] = useState("productive");
-  const moods = [
-    { emoji: "😊", label: "happy" },
-    { emoji: "😐", label: "neutral" },
-    { emoji: "😔", label: "sad" },
-    { emoji: "🤔", label: "thoughtful" },
-    { emoji: "💪", label: "energetic" },
-    { emoji: "🧠", label: "productive" },
-  ];
-
-  const currentTime = new Date();
-  const hours = currentTime.getHours();
-  let greeting;
-  if (hours < 12) greeting = "Good Morning";
-  else if (hours < 18) greeting = "Good Afternoon";
-  else greeting = "Good Evening";
-
+  const [loading, setLoading] = useState(true);
   const topTasks = [
     {
       id: 1,
@@ -65,6 +50,22 @@ const Dashboard = () => {
       timeRequired: 30,
     },
   ];
+
+  const moods = [
+    { emoji: "😊", label: "happy" },
+    { emoji: "😐", label: "neutral" },
+    { emoji: "😔", label: "sad" },
+    { emoji: "🤔", label: "thoughtful" },
+    { emoji: "💪", label: "energetic" },
+    { emoji: "🧠", label: "productive" },
+  ];
+
+  const currentTime = new Date();
+  const hours = currentTime.getHours();
+  let greeting;
+  if (hours < 12) greeting = "Good Morning";
+  else if (hours < 18) greeting = "Good Afternoon";
+  else greeting = "Good Evening";
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
